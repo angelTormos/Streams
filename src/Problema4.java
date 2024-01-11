@@ -15,7 +15,7 @@ public class Problema4 {
             }
         }
 
-        cadenas.stream()
+        cadenas
                 .forEach(System.out::println);
     }
 }

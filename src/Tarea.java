@@ -1,13 +1,13 @@
-public class Tareas implements Comparable<Tareas>{
+public class Tarea implements Comparable<Tarea>{
     private int prioridad;
     private int duracion;
 
-    public Tareas(int prioridad, int duracion) {
+    public Tarea(int prioridad, int duracion) {
         this.prioridad = prioridad;
         this.duracion = duracion;
     }
 
-    public int getPrioridad() {
+    public int getNombre() {
         return this.prioridad;
     }
 
@@ -17,18 +17,18 @@ public class Tareas implements Comparable<Tareas>{
 
     @Override
     public String toString() {
-        return this.getPrioridad() + " (" + this.getDuracion() + ")";
+        return this.getNombre() + " (" + this.getDuracion() + ")";
     }
 
     @Override
-    public int compareTo(Tareas tareas) {
-        if (this.prioridad == tareas.getPrioridad()) {
-            if (this.duracion > tareas.duracion){
+    public int compareTo(Tarea tarea) {
+        if (this.prioridad == tarea.getNombre()) {
+            if (this.duracion > tarea.duracion){
                 return -1;
             }else {
                 return 1;
             }
-        } else if (this.prioridad > tareas.getPrioridad()) {
+        } else if (this.prioridad > tarea.getNombre()) {
             return -1;
         } else {
             return 1;

@@ -1,4 +1,5 @@
-public class Loteria implements Comparable<Loteria>{
+
+public class Loteria implements Comparable<Loteria> {
     private int inversion;
     private int premio;
 
@@ -15,23 +16,19 @@ public class Loteria implements Comparable<Loteria>{
         return this.premio;
     }
 
-    @Override
-    public String toString() {
-        if (this.inversion < this.premio) {
-            return "Si";
-        } else {
-            return "No";
+        @Override
+        public int compareTo(Loteria loteria) {
+            if (this.inversion == loteria.getInversion()) {
+                if (this.premio > loteria.premio){
+                    return -1;
+                }else {
+                    return 1;
+                }
+            } else if (this.inversion > loteria.getInversion()) {
+                return -1;
+            } else {
+                return 1;
+            }
         }
-    }
 
-    @Override
-    public int compareTo(Loteria loteria) {
-        if (this.inversion == loteria.getInversion()) {
-            return 1;
-        } else if (this.inversion > loteria.getInversion()) {
-            return -1;
-        } else {
-            return 0;
-        }
-    }
 }

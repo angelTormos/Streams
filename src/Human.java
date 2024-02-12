@@ -1,4 +1,4 @@
-public class Human implements Comparable<Human> {
+public class  Human implements Comparable<Human> {
     private String nombre;
     private int salario;
 
